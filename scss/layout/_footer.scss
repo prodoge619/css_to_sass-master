@@ -1,0 +1,40 @@
+footer {
+	padding: 1em 1em;
+	margin: 20px auto;
+	font-size: 1.2em;
+	max-width: 95%;
+	border-top: 1px solid $grey;
+}
+
+footer span {
+	float: left;
+}
+
+footer a {
+	float: right;
+}
+
+footer li {
+	display: none;
+    
+    @media #{$brk-narrow}{
+    	footer li {
+		display: inline-block;
+		float: left;
+		padding: 0 10px;
+		text-transform: capitalize;
+	   }
+    }
+}
+
+	.detailed-footer-bar {
+        @media #{$brk-narrow} {
+        float: right;
+        }
+    }
+
+	.simple-footer-bar a {
+        @media #{$brk-narrow} {
+		display: none;
+        }
+	}

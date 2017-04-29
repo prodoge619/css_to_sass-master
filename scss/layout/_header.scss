@@ -1,0 +1,21 @@
+/* ---- Header ---- */
+
+.main-description {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+
+    @media #{$brk-narrow}{
+        .main-description {
+		max-width: 95%;
+	   }
+    }
+    
+    @media #{$brk-wide}{
+        	.main-description {
+		max-width: 100%;
+		padding: 30px;
+		margin-bottom: 30px;
+	   }
+    }
+}

@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif; 
+	line-height: 1.6;
+    color: $grey;
+    background-color: $white;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 1.5em;
+}
+
+h1,
+nav,
+h2,
+footer {
+	font-family: 'Open Sans Condensed', bold;
+}
+
+a {
+	text-decoration: none;
+	color: $grey;
+}
+
+a:visited {
+  color: $grey;
+}
+
+ul {
+    list-style-type: none;
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.name a,
+.main-nav li {
+  display: block;
+  max-width: 90%;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #fff;
+  margin: 5px auto;
+}
+.name {
+    font-size: 2em;
+    
+    @media #{$brk-narrow} {
+        .name a {
+		background-color: inherit;
+	   }
+    }
+    
+    @media #{$brk-wide} {
+        .name a {
+		float: left;
+	   }
+    }
+}
+
+.main-nav li a {
+  font-size: 1.2em;
+  color: $grey;
+  text-transform: capitalize;
+}
+
+.main-nav a:hover {
+  color: $light-red;
+}
+
+nav {
+  margin-bottom: 15px;
+    
+    @media #{$brk-wide} {
+        nav {
+		max-width: 100%;
+	}
+
+    }
+}
+
+	
+@media #{$brk-narrow} {
+	.main-nav li {
+	  display: inline-block;
+	  text-align: center;
+	  padding: 10px 15px;
+      background-color: inherit;
+	}
+
+	.main-nav ul {
+		margin: 0 auto;
+		text-align: center;
+	}
+    	
+    .wrapper {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+    .profile-picture {
+		max-width: 50%;
+		float: right;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.description-text {
+		max-width: 50%;
+		margin: 0 auto;
+		padding: 1em;
+		float: left;
+		font-size: 1.2em;
+		text-align: left;
+	}
+}
+
+@media #{$brk-wide} {
+/* ---- main ---- */
+    .wrapper {
+		max-width: 1024px;
+		margin: 20px auto;
+	}
+    
+/* ---- navigation ---- */
+	.top-navigation {
+		float: right;
+	}
+    
+/* ---- description ---- */
+    .description-text {
+		font-size: 1.3em;
+		padding-left: 0;
+	}
+}
