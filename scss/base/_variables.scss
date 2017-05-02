@@ -1,14 +1,21 @@
 //Color Variables
 
-$white: #fafafa;
-$grey: #3a3a3a;
-$light-red: #e67670;
-$white2: #fff;
-$light-blue: #a1b1c1;
-$light-grey: #94a2af;
-$darkgolden: darkgoldenrod; 
+$white      : #fafafa;        /*Oh you know this one...*/
+$another-white  : #f2f2f2;
+$grey       : #3a3a3a;         /*buttons*/
+$light-red  : #e67670;    /*Hover state*/
+$white2     : #fff;          /*background*/
+$light-blue : #a1b1c1;   /*Not entierly sure what this is tho...*/
+$light-grey : #94a2af;   /*Ooo this one is for the Hobbies buttons! I'm color blind so I might be wrong...*/
+$darkgolden: darkgoldenrod;  /*Text under hobbies*/
+
+//Font
+
+$font   : 'Open Sans Condensed', sans-serif;
+$bold-font  : 'Open Sans Condensed', bold;
+
 
 // Media Query break points
 
-$brk-narrow : '(max-width: 768px)';
-$brk-wide   : '(max-width: 1024px)';
+$brk-narrow : '(min-width: 768px)';
+$brk-wide   : '(min-width: 1024px)';

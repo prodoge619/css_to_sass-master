@@ -6,10 +6,10 @@ h2 {
 }
 
 .main-content {
-  margin: 0 auto;
-  text-align: center;
+  @extend %margin-1;
+  @extend %centered;
   background-color: $white2;
-  padding: 10px 20px;
+  @extend %pad-10-20;
     
     @media #{$brk-wide} {
         margin: 0 auto;
@@ -28,56 +28,117 @@ h2 {
 }
 
 .final-content {
-  text-align: center;
+  @extend %centered;
   margin: 10px auto;
   background-color: $white2;
-  padding: 10px 20px;
+  @extend %pad-10-20;
+}
+.skill-list li {
+  @extend %br-6;
+  display: inline-block;
+  padding: 5px 10px;
+  background: $light-grey;
+  color: $white2;
+  margin: 6px;
 }
 
-@media #{$brk-narrow} {
-    .container {
+.hobbies-list li {
+  @extend %br-6;
+  display: inline-block;
+  padding: 5px 10px;
+  background: $light-blue;
+  color: $white2;
+  margin: 6px;
+}
+
+
+
+/* ---- containers ---- */
+
+.contact {
+	text-align: center;
+	padding: 10px 15px;
+	margin: 10px auto;
+}
+
+.contact table {
+	@extend %margin-1;
+}
+
+.contact td {
+	padding-left: 15px;
+	text-align: left;
+}
+
+
+/*---- New Decorations/Items -----*/
+
+    .main-description {
+        @media #{$brk-narrow}{
+		  max-width: 95%;
+        }
+        @media #{$brk-wide}{
+            max-width: 100%;
+            padding: 30px;
+            margin-bottom: 30px;
+       }
+    }
+
+	.profile-picture {
+        @media #{$brk-narrow}{
+            max-width: 50%;
+            float: right;
+            margin: 0 auto;
+            padding: 0;
+	}
+}
+	.description-text {
+        @media #{$brk-narrow}{
+            max-width: 50%;
+            margin: 0 auto;
+            padding: 1em;
+            float: left;
+            font-size: 1.2em;
+            text-align: left;
+	}
+        @media #{$brk-wide}{
+            font-size: 1.3em;
+		    padding-left: 0;
+        }
+}
+
+	.container {
+        @media #{$brk-narrow}{
 		max-width: 50%;
 		float: left;
 		padding: 10px;
 	}
-
-	#travel-app-container {
-	    clear: left;
-    }
+        @media #{$brk-wide} {
+          max-width: 33.333%;
+		  float: left;
+        }
 }
-
-@media #{brk-wide}{
-    .container {
-		max-width: 33.333%;
-		float: left;
+	#travel-app-container {
+        @media #{$brk-narrow}{
+	    clear: left;
 	}
-    
+        @media #{$brk-wide} {
+            clear: none;
+        }
 }
 
 /* ---- skills ---- */
 
-.skill-list li {
-  border-radius: 6px;
-  display: inline-block;
-  padding: 5px 10px;
-  background: $light-grey;
-  color: white;
-  margin: 6px;
-}
-
-.skill-list li:hover{
-    transform: scale(1.5);
-}
-
-.skills-image {
-    @media #{$brk-narrow} {
+	.skills-image {
+        @media #{$brk-narrow}{
 		max-width: 60%;
 		margin: auto;
 		float: left;
 	}
 }
-	.skill-list ul {
-        @media #{$brk-narrow} {
+
+	.skill-list ul{
+        @media #{$brk-narrow}{
 		max-width: 40%;
 		margin-top: 3em;
 		padding-left: 10px;
@@ -87,32 +148,23 @@ h2 {
 
 /* ---- Hobbies ---- */
 
-.hobbies-list li {
-  border-radius: 6px;
-  display: inline-block;
-  padding: 5px 10px;
-  background: $light-blue;
-  color: $white;
-  margin: 6px;
-}
-.hobbies-list li:hover{
-    transform: scale(1.5);
-}
-
-@media #{$brk-narrow}{
     .hobbies-image {
+        @media #{$brk-narrow}{
 		max-width: 60%;
 		margin: auto;
 		float: right;
 	}
-    
+}
 	.hobbies-list ul{
+        @media #{$brk-narrow}{
 		max-width: 40%;
 		margin-top: 3em;
 		padding-left: 10px;
 		float: left;
 	}
+}
     .hobbie-text {
+        @media #{$brk-narrow}{
         font-size: 1.2em;
         margin-top: 1em;
         float: right;
@@ -121,24 +173,9 @@ h2 {
         font-weight: bold;
     }
 }
-
-
-.contact {
-	text-align: center;
-	padding: 10px 15px;
-	margin: 10px auto;
-    
-    @media #{$brk-narrow} {
+	.contact {
+        @media #{$brk-narrow}{
 		max-width: 70%;
 		margin-bottom: 40px;
-    }
-}
-
-.contact table {
-	margin: 0 auto;
-}
-
-.contact td {
-	padding-left: 15px;
-	text-align: left;
+	}
 }

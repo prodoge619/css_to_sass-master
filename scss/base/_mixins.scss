@@ -1,9 +1,3 @@
-@mixin font-face($family, $file) {
-    @font-face {
-       font-family: 'Open Sans Condensed', sans-serif; 
-    }
-}
-
 //Text
 
 @mixin font($size, $l-height:null, $weight:null, $color:null ) {

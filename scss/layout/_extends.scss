@@ -3,3 +3,25 @@
 	display: table;
 	clear: both;
 }
+
+// Center text
+
+%centered {
+	text-align: center;
+}
+
+// Border Radius
+%br-6 {
+    border-radius: 6px;
+}
+
+// Margins
+%margin-1 {
+    margin: 0 auto;
+}
+
+// Padding
+
+%pad-10-20 {
+    padding: 10px 20px;
+}
