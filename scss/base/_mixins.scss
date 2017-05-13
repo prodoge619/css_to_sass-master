@@ -1,13 +1,136 @@
-@mixin text($size, $l-height, $weight, $font-family, $color) {
-	font-size: $size;
-	line-height: $l-height;
-	font-weight: $weight;
-	font-family: $font-family;
-	color: $color;
-}
 
-@mixin list($margin, $padding, $style) {
-	margin: $margin;
-	padding: $padding;
-	list-style: $style;
-}
+@media (min-width: 1024px) {
+  /* ---- main ---- */
+  .wrapper {
+    max-width: 1024px;
+    margin: 20px auto; }
+
+  /* ---- navigation ---- */
+  nav {
+    max-width: 100%; }
+
+  .name a {
+    float: left; }
+
+  .top-navigation {
+    float: right; }
+
+  /* ---- description ---- */
+  .main-description {
+    max-width: 100%;
+    padding: 30px;
+    margin-bottom: 30px; }
+
+  .description-text {
+    font-size: 1.3em;
+    padding-left: 0; }
+
+  /* ---- containers ---- */
+  .main-content {
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 100%; }
+
+  .container {
+    max-width: 33.333%;
+    float: left; }
+
+  #travel-app-container {
+    clear: none; } }
+
+
+		@media (min-width: 768px) {
+		  /* ---- main ---- */
+		  .wrapper {
+		    max-width: 95%;
+		    margin: 0 auto; }
+
+		  /* ---- nav ---- */
+		  .name a {
+		    background-color: inherit; }
+
+		  .main-nav li {
+		    display: inline-block;
+		    text-align: center;
+		    padding: 10px 15px;
+		    background-color: inherit; }
+
+		  .main-nav ul {
+		    margin: 0 auto;
+		    text-align: center; }
+
+		  /* ---- description ---- */
+		  .main-description {
+		    max-width: 95%; }
+
+		  .profile-picture {
+		    max-width: 50%;
+		    float: right;
+		    margin: 0 auto;
+		    padding: 0; }
+
+		  .description-text {
+		    max-width: 50%;
+		    margin: 0 auto;
+		    padding: 1em;
+		    float: left;
+		    font-size: 1.2em;
+		    text-align: left; }
+
+		  /* ---- containers ---- */
+		  .container {
+		    max-width: 50%;
+		    float: left;
+		    padding: 10px; }
+
+		  #travel-app-container {
+		    clear: left; }
+
+		  /* ---- skills ---- */
+		  .skills-image {
+		    max-width: 60%;
+		    margin: auto;
+		    float: left; }
+
+		  .skill-list ul {
+		    max-width: 40%;
+		    margin-top: 3em;
+		    padding-left: 10px;
+		    float: right; }
+
+		  /* ---- Hobbies ---- */
+		  .hobbies-image {
+		    max-width: 60%;
+		    margin: auto;
+		    float: right; }
+
+		  .hobbies-list ul {
+		    max-width: 40%;
+		    margin-top: 3em;
+		    padding-left: 10px;
+		    float: left; }
+
+		  .hobbie-text {
+		    font-size: 1.2em;
+		    margin-top: 1em;
+		    float: right;
+		    justify-content: space-around;
+		    color: darkgoldenrod;
+		    font-weight: bold; }
+
+		  .contact {
+		    max-width: 70%;
+		    margin-bottom: 40px; }
+
+		  /* ---- Footer ---- */
+		  .detailed-footer-bar {
+		    float: right; }
+
+		  footer li {
+		    display: inline-block;
+		    float: left;
+		    padding: 0 10px;
+		    text-transform: capitalize; }
+
+		  .simple-footer-bar a {
+		    display: none; } }
