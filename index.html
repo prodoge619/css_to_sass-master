@@ -1,145 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Responsive Layout</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Students Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:600,400,400i,300i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
-    <div class="wrapper" id="page-top">
-        <nav class="main-nav clearfix">
-            <h1 class="name"><a href="index.html">Aaron Yow</a></h1>
-            <div class="top-navigation">
-                <ul>
-                    <li><a href="#index.html">Home</a></li>
-                    <li><a href="#portfolio-anchor">Portfolio</a></li>
-                    <li><a href="#skills-anchor">Skills</a></li>
-                    <li><a href="#hobbies-anchor">Hobbies</a></li>
-                    <li><a href="#contact-anchor">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    <header>
-      <div class="main-description clearfix">
-        <img class="profile-picture" src="images/me2.png" alt="Photo of Aaron Yow">
-        <div class="description-text">
-          <p>Hi! My name is Aaron, a front end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use for you!</p>
-        </div>
-      </div>
-    </header>
+<div class="wrapper">
+<nav class="clearfix" id="aarons-home">
+  <h1 class="name">aaron</h1>
+  <ul class="clearfix">
+    <li><a href="#aarons-home">Home</a></li>
+    <li><a href="#aarons-portfolio">Portfolio</a></li>
+    <li><a href="#aarons-skills">Skills</a></li>
+    <li><a href="#aarons-contact">Contact</a></li>
+  </ul>
+</nav>
 
- <div class="main-content clearfix">
-      <div>
-        <h2 id="portfolio-anchor">Portfolio</h2>
+<header class="clearfix">
+  <img src="imgs/responsive-layout-profile.png" class="profile-image" alt="Image of aaron">
+  <p>Hi my name is Aaron and my hobbies are racing and drifting</p>
+</header>
 
-        <div class="container">
-          <img src="images/portfolio-1.png" alt="Marketing Page">
-          <h3>Marketing Page</h3>
-          <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
-        </div>
 
-        <div class="container">
-          <img src="images/portfolio-2.png" alt="Search Page">
-          <h3>Search Page</h3>
-          <p>This project searches through a specific database to find information that the user is trying to look up.</p>
-        </div>
+<section class="portfolio clearfix" id="aarons-portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li>
+      <img src="imgs/portfolio-1.png" alt="Image of a Grid">
+        <h3>Grid</h3>
+        <p>Yop, it's a grid. Some images flow together in an awesome way. Cool hm!</p>
+      </li>
 
-        <div class="container" id="travel-app-container">
-          <img src="images/portfolio-3.png" alt="Travel App">
-          <h3>Travel App</h3>
-          <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
-        </div>
+      <li>
+      <img src="imgs/portfolio-2.png" alt="Image of a Business page">
+        <h3>Business Page</h3>
+        <p>Business is what drives us, or not? check out the business page for more infos.</p>
+      </li>
 
-        <div class="container">
-          <img src="images/portfolio-4.png" alt="Map of Favourite Spots">
-          <h3>Map of Favourite Spots</h3>
-          <p>This project uses mapping apis to plot points for my favourite spots in the city for a do-it-yourself walking tour.</p>
-        </div>
+      <li>
+      <img src="imgs/portfolio-3.png" alt="Image of an App">
+        <h3>App</h3>
+        <p>Apptasti. A slick design for some App. Pretty simple, cool and minimal.</p>
+      </li>
 
-        <div class="container">
-          <img src="images/portfolio-5.png" alt="Photo Gallery">
-          <h3>Photo Gallery</h3>
-          <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
-        </div>
+      <li>
+      <img src="imgs/portfolio-4.png" alt="Image of a Map">
+        <h3>Map</h3>
+        <p>Find everything you're looking for on this amazing map. Cool features included</p>
+      </li>
 
-        <div class="container">
-          <img src="images/portfolio-6.png" alt="Calculator">
-          <h3>Calculator</h3>
-          <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
-        </div>
-      </div>
-    </div>
-<div class="final-content clearfix">
-      <h2 id="skills-anchor">skills</h2>
-      <div class="skills-image">
-        <img src="images/multi-layout.png" alt="Photo of Cross Platform Web Pages">
-      </div>
-      <div class="skill-list">
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
+      <li>
+      <img src="imgs/portfolio-5.png" alt="Image of a Gallery">
+        <h3>Gallery</h3>
+        <p>Show off your favourite images and projects. Slide around and get into it</p>
+      </li>
 
-        </ul>
-      </div>
-    </div>
-    <div class="final-content clearfix">
-      <h2 id="hobbies-anchor">Hobbies</h2>
-      <div class="hobbies-image">
-        <img src="images/hobbies.jpg" alt="A bird's eye view of a laptop, design materials, a camera and a clapperboard">
-      </div>
-      <div class="hobbies-list">
-        <ul>
-          <li>Photography</li>
-          <li>Cinematography</li>
-          <li>Music is life</li>
-          <li>Computer/network building</li>
-          <li>Web deign/development</li>
-          <li>LEARNING!</li>
-          <li>Photoshop</li>
-          <li>Drifting</li>
-        </ul>
-          <p class="hobbie-text">I'm fascinated with so many aspects of life. I love traveling and meeting new people. I'm always pushing myself to learn new things and progress the current knowledge I already posses. Honestly, web development is not only my profession but a hobby as well. I love everything about Programming and Design and this bring those two things together beautifully.</p>
-      </div>
-    </div>
+      <li>
+      <img src="imgs/portfolio-6.png" alt="Image of a Calculator">
+        <h3>Calculator</h3>
+        <p>Numbers for everyone. You don't need to be a math geniues, simply throw in some numbers.</p>
+      </li>
+    </ul>
+</section>
 
-    <div class="contact">
-      <h2 id="contact-anchor">contact</h2>
-      <p>I'd love to hear from you! Even if it just chit chat about anything Media related ;)</p>
-      <table>
-        <tr>
-          <td>Phone</td>
-          <td><a href="tel:01222222235"><b>01222222235</b></a></td>
-        </tr>
-        <tr>
-          <td>Email </td>
-          <td><a href="mailto:aaronyow@email.com"><b>aaronyow@email.com</b></a></td>
-        </tr>
-      </table>
-    </div>
 
-    <footer class="clearfix">
-      <div class="simple-footer-bar">
-        <span>Aaron Yow</span>
-        <a href="#page-top">Back To Top</a>
-      </div>
+<section class="skills" id="aarons-skills">
+  <h2>What I can do</h2>
+  <ul>
+    <li>Webdesign</li>
+    <li>Printdesign</li>
+    <li>Packagingdesign</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Cooking</li>
+  </ul>
+</section>
 
-      <div class="detailed-footer-bar">
-        <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="#portfolio-anchor">portfolio</a></li>
-          <li><a href="#skills-anchor">skills</a></li>
-          <li><a href="#contact-anchor">contact</a></li>
-        </ul>
-      </div>
 
-    </footer>
+
+
+<section class="contact" id="aarons-contact">
+  <h2>Contact</h2>
+  <p>Get in touch and let's get things rolling!</p>
+  <br>
+  <p>Email: <a href="mailto:aaron@treehouse.com">aaron@treehouse.com</a></p>
+  <br>
+  <p>Phone: <a href="callto:012225487">012225487</a></p>
+</section>
+
+<div class="border"> </div>
+
+<footer>
+  <div class="mobile">
+  <ul>
+    <li>aaron</li>
+    <li><a href="#aarons-home">Back to top</a></li>
+  </ul>
+</div>
+  <div class="desktop">
+  <ul class="float-left">
+      <li>aaron</li>
+  </ul>
+  <ul class="float-right">
+      <li><a href="#aarons-home">Home</a></li>
+      <li><a href="#aarons-portfolio">Portfolio</a></li>
+      <li><a href="#aarons-skills">Skills</a></li>
+      <li><a href="#aarons-contact">Contact</a></li>
+    </ul>
   </div>
+</footer>
+
+</div>
+
+
 </body>
-
-
-
 </html>

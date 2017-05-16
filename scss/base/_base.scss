@@ -1,114 +1,279 @@
 
-* {
-	box-sizing: border-box;
-}
+// Typography ///////////////////////////////////
 
 body {
-    @include font(1.1rem, 1.6, normal, $grey);
-    font-family: $font; 
-    background-color: $white;
+  font-family: $primary;
+  background-color: $dirtywhite;
 }
 
 h1 {
-	padding: 0;
-	margin: 0;
-	font-size: 2.5em;
+  @extend %primaryHeadlines;
 }
 
-h1,
-nav,
-h2,
+h2 {
+  @extend %secondaryHeadlines;
+  color: $lightgray;
+  font-family: $secondary;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  padding: 4rem 0 .5rem 0;
+}
+
+h3 {
+  @extend %thirdHeadlines;
+}
+
+p {
+  @include primaryParagraphs;
+}
+
+
+
+
+// Links Global ///////////////////////////////////
+a,
+a:visited,
+a:link {
+  @include primaryLinks;
+}
+
+a:hover {
+  @extend a;
+    @media screen and (min-width: $tabletBREAK) {
+      color: $turqouise;
+    }
+}
+
+
+
+
+// Header ///////////////////////////////////
+header {
+  margin-top: 3rem;
+
+    p {
+      padding: 2rem 2rem;
+        @media screen and (min-width: $tabletBREAK) {
+          @include twoColumns;
+          float: left;
+          text-align: left;
+          font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+
+// Profile ///////////////////////////////////
+.profile-image {
+  max-width: 60%;
+
+    @media screen and (min-width: $tabletBREAK) {
+      @include twoColumns;
+      float: right;
+    }
+}
+
+
+
+
+// Portfolio ///////////////////////////////////
+.portfolio {
+  background-color: $white;
+  width: 100%;
+
+    h3 {
+      padding: 1rem 0 .5rem 0;
+    }
+
+    li {
+      @include centered;
+      max-width: 90%;
+      margin-top: 3rem;
+        @media screen and (min-width: $tabletBREAK) {
+          @include twoColumns;
+          float: left;
+      }
+        @media screen and (min-width: $desktopBREAK) {
+          @include notCentered;
+          width: 31.33333%;
+          padding-left: 1%;
+          padding-right: 1%;
+          float: left;
+      }
+    }
+
+    li:last-child {
+      padding-bottom: 3rem; }
+
+    img {
+      max-width: 100%; }
+}
+
+
+
+// Skills ///////////////////////////////////
+.skills {
+  background-color: $turqouise;
+  color: $white;
+
+    h2 {
+      color: $yellowgold;
+      padding-bottom: 2em;
+    }
+
+    li {
+      line-height: 2rem;
+    }
+
+    ul {
+      padding-bottom: 3rem;
+    }
+
+}
+
+
+
+
+
+// Footer ///////////////////////////////////
+
 footer {
-    @include font(1rem);
-	font-family: $bold-font;
-}
+  margin-top: 1rem;
+  padding: 2rem 0;
+  overflow: auto;
+    @media screen and (min-width: $desktopBREAK) {
+      @include centered;
+      width: 90%;
+  }
 
-a {
-	text-decoration: none;
-	color: $grey;
-}
+    li {
+      display: inline;
+      float: left;
+      padding-left: 1rem;
+    }
 
-a:visited {
-  color: $grey;
-}
-
-ul {
-    list-style-type: none;
-	@extend %margin-1;
-	padding-left: 0;
-}
-
-img {
-	max-width: 100%;
+    li:last-child {
+      float: right;
+      padding-right: 1rem;
+    }
 }
 
 
-/* ------------------------------------
-  Base Layout Styles
------------------------------------- */
 
-/* ---- Navigation ---- */
-.name a,
-.main-nav li {
-  display: block;
-  max-width: 90%;
-  @extend %centered;
-  padding: 10px 15px;
-  background-color: $white2;
-  margin: 5px auto;
-}
-.name {
-    font-size: 2em;
-}
-
-.main-nav li a {
-  @include font(1.2rem);
-  color: $grey;
-  text-transform: capitalize;
-}
-
-.main-nav a:hover {
-  color: $light-red;
-}
-
-/* ---- nav ---- */
+// Navigation ///////////////////////////////////
 
 nav {
-  margin-bottom: 15px;
-}
+  background-color: $turqouise;
+  color: $white;
 
-/*---- New Decorations/Items -----*/
-
-	.name a {
-        @media #{$brk-narrow}{
-		background-color: inherit;
-	}
-        @media #{$brk-wide}{
-            float: left;
-        }
-}
-	.top-navigation {
-        @media #{$brk-wide}{
-		float: right;
-	}
-}
-	.main-nav li {
-        @media #{$brk-narrow}{
-	  display: inline-block;
-	  text-align: center;
-	  padding: 10px 15px;
-      background-color: inherit;
-	}
-}
-	.main-nav ul {
-        @media #{$brk-narrow}{
-		margin: 0 auto;
-		text-align: center;
-	}
-}
-
-.nav {
-    @media #{$brk-wide}{
-        max-width: 100%;
+    ul {
+      @media screen and (min-width: $desktopBREAK) {
+      float: right;
+      }
     }
+
+    li {
+      @include centered;
+      margin-top: 2px;
+      padding: 10px 0px;
+      background-color: $white;
+      color: inherit;
+      width: 70%;
+        @media screen and (min-width: $tabletBREAK) {
+        display: inline-block;
+        background-color: $transparent;
+        padding: 0 1rem 1rem 1rem;
+        width: 10%;
+      }
+        @media screen and (min-width: $desktopBREAK) {
+        float: left;
+        background-color: $transparent;
+        width: auto;
+        padding: 1.5rem 2rem 1.5rem 0rem;
+      }
+
+      @media screen and (min-width: $tabletBREAK) {
+        a,
+        a:visited,
+        a:link,
+        a:hover {
+          @include primaryLinks;
+          color: $white;
+        }
+        a:hover {
+          color: $rosered;
+        }
+      }
+    }
+}
+
+
+
+.clearfix {
+  overflow: auto;
+}
+
+
+.wrapper {
+  @include centered;
+  text-align: center;
+  width: 90%;
+    @media screen and (min-width: $tabletBREAK) {
+      width: 100%;
+    }
+    @media screen and (min-width: $desktopBREAK) {
+      width: $desktopBREAK;
+    }
+}
+
+
+
+.contact {
+    @media screen and (min-width: $tabletBREAK) {
+      p {
+      width: 40%;
+      @include centered;
+      }
+    }
+      h2 {
+        padding-bottom: 2em;
+      }
+}
+
+
+
+  .name,
+  .float-left {
+    @media screen and (min-width: $desktopBREAK) {
+    float: left;
+    }
+  }
+
+  .float-right {
+    @media screen and (min-width: $desktopBREAK) {
+    float: right;
+    }
+  }
+
+
+
+.border {
+  @extend %primaryBorder;
+}
+
+
+
+.desktop {
+  display: none;
+  @media screen and (min-width: $desktopBREAK) {
+    display: inline;
+  }
+}
+
+.mobile {
+  @media screen and (min-width: $desktopBREAK) {
+    display: none;
+  }
 }

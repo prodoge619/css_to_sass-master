@@ -1,0 +1,20 @@
+%primaryHeadlines {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+%secondaryHeadlines {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+%thirdHeadlines {
+  @extend %secondaryHeadlines;
+}
+
+%primaryBorder {
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  border-top: 1px solid #a0a2a4;
+}
