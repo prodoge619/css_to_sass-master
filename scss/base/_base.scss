@@ -39,9 +39,9 @@ a:link {
 
 a:hover {
   @extend a;
-    @media screen and (min-width: $tabletBREAK) {
-      color: $turqouise;
-    }
+  @include tablet {
+    color: $turqouise;
+  }
 }
 
 
@@ -95,12 +95,12 @@ header {
           @include twoColumns;
           float: left;
       }
-        @media screen and (min-width: $desktopBREAK) {
-          @include notCentered;
-          width: 31.33333%;
-          padding-left: 1%;
-          padding-right: 1%;
-          float: left;
+      @include desktop {
+       @include notCentered;
+       width: 31.33333%;
+       padding-left: 1%;
+       padding-right: 1%;
+       float: left;
       }
     }
 
