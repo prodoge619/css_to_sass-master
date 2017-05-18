@@ -53,7 +53,7 @@ header {
 
     p {
       padding: 2rem 2rem;
-        @media screen and (min-width: $tabletBREAK) {
+        @include tablet {
           @include twoColumns;
           float: left;
           text-align: left;
@@ -69,7 +69,7 @@ header {
 .profile-image {
   max-width: 60%;
 
-    @media screen and (min-width: $tabletBREAK) {
+    @include tablet {
       @include twoColumns;
       float: right;
     }
@@ -91,7 +91,7 @@ header {
       @include centered;
       max-width: 90%;
       margin-top: 3rem;
-        @media screen and (min-width: $tabletBREAK) {
+        @include tablet {
           @include twoColumns;
           float: left;
       }
@@ -143,7 +143,7 @@ footer {
   margin-top: 1rem;
   padding: 2rem 0;
   overflow: auto;
-    @media screen and (min-width: $desktopBREAK) {
+    @include desktop {
       @include centered;
       width: 90%;
   }
@@ -169,7 +169,7 @@ nav {
   color: $white;
 
     ul {
-      @media screen and (min-width: $desktopBREAK) {
+      @include desktop {
       float: right;
       }
     }
@@ -181,20 +181,20 @@ nav {
       background-color: $white;
       color: inherit;
       width: 70%;
-        @media screen and (min-width: $tabletBREAK) {
+        @include tablet {
         display: inline-block;
         background-color: $transparent;
         padding: 0 1rem 1rem 1rem;
         width: 10%;
       }
-        @media screen and (min-width: $desktopBREAK) {
+        @include desktop {
         float: left;
         background-color: $transparent;
         width: auto;
         padding: 1.5rem 2rem 1.5rem 0rem;
       }
 
-      @media screen and (min-width: $tabletBREAK) {
+      @include tablet {
         a,
         a:visited,
         a:link,
@@ -220,10 +220,10 @@ nav {
   @include centered;
   text-align: center;
   width: 90%;
-    @media screen and (min-width: $tabletBREAK) {
+    @include tablet {
       width: 100%;
     }
-    @media screen and (min-width: $desktopBREAK) {
+    @include desktop {
       width: $desktopBREAK;
     }
 }
@@ -231,7 +231,7 @@ nav {
 
 
 .contact {
-    @media screen and (min-width: $tabletBREAK) {
+    @include tablet {
       p {
       width: 40%;
       @include centered;
@@ -246,13 +246,13 @@ nav {
 
   .name,
   .float-left {
-    @media screen and (min-width: $desktopBREAK) {
+    @include desktop {
     float: left;
     }
   }
 
   .float-right {
-    @media screen and (min-width: $desktopBREAK) {
+    @include desktop {
     float: right;
     }
   }
@@ -267,13 +267,13 @@ nav {
 
 .desktop {
   display: none;
-  @media screen and (min-width: $desktopBREAK) {
+  @include desktop {
     display: inline;
   }
 }
 
 .mobile {
-  @media screen and (min-width: $desktopBREAK) {
+  @include desktop {
     display: none;
   }
 }
